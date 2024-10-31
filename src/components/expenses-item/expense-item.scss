@@ -1,0 +1,42 @@
+.expense-grid {
+    width: 100%;
+    max-width: 400px;
+    background-color: #313438;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto 1fr; 
+    align-items: center;
+    padding: 12px;
+    gap: 16px;
+}
+
+.expense-grid h2 {
+    font-size: 16pt;
+    
+}
+
+.expense-description {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 16px;
+    width: 100%;
+
+}
+
+.expense-description h2 {
+    margin: 0;
+    font-size: 16pt;
+}
+
+.expense-price {
+    border: 1px solid #FFF;
+    border-radius: 6px;
+    background-color: rgb(88, 1, 123);
+    color: white;
+    font-size: 14pt;
+    font-weight: 700;
+    padding: 6px 8px;
+    display: flex;
+    justify-self: end;
+}

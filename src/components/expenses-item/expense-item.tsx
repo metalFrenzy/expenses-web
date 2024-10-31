@@ -1,8 +1,14 @@
+import './expense-item.scss'
+
 function ExpenseItem() {
     return (
-        <div>
+        <div className='expense-grid'>
             <div>
-                <h2>This is zobryyy</h2>
+               <h2> 30 Oct 2024</h2>
+            </div>
+            <div className='expense-description'>
+                <h2>Shopping</h2>
+                <div className='expense-price'>1500EG</div>
             </div>
         </div>
     )
