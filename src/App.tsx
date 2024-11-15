@@ -1,12 +1,13 @@
-import ExpenseItem from './components/expenses-item'
+import ExpenseCategory from './components/expense-category'
+import AddCategoryButton from './components/add-category-button'
 
 function App() {
 
 
   return (
     <>
-
-      <ExpenseItem></ExpenseItem>
+      <AddCategoryButton></AddCategoryButton>
+      <ExpenseCategory></ExpenseCategory>
     </>
   )
 }
