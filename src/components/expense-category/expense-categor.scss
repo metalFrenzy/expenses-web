@@ -1,0 +1,39 @@
+.expense-category {
+  background-color: #ffffff;
+  border-radius: 10px;
+  max-width: 20vh;
+  padding: 0.5rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.expense-category:hover {
+  box-shadow: rgba(242, 147, 57, 0.1) 0px 8px 24px;
+}
+
+h3 {
+  font-size: 12pt;
+}
+
+h4 {
+  font-size: 15pt;
+}
+
+img {
+  object-fit: cover;
+  width: 30px;
+  filter: invert(1) brightness(100%) contrast(100%);
+}
+
+.img-container {
+  background-color: #f29339;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  justify-self: center;
+}
