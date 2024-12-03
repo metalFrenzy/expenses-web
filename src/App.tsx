@@ -1,13 +1,11 @@
-import ExpenseCategory from './components/expense-category'
-import AddCategoryButton from './components/add-category-button'
+import HomePage from "./pages/home-page"
+
 
 function App() {
-
-
   return (
     <>
-      <AddCategoryButton></AddCategoryButton>
-      <ExpenseCategory></ExpenseCategory>
+
+     <HomePage></HomePage> 
     </>
   )
 }

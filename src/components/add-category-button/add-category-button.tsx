@@ -8,6 +8,14 @@ import ExpenseCategory from '../expense-category';
 function AddCategoryButton() {
     const [categories, setCategories] = useState<any>([]);
 
+    const catgory = [
+        {
+          id: "1",
+          name: "Food & Drinks",
+          amount: "1500EGP",
+        }
+      ]
+
     const handleAddCategory = () => {
         setCategories([...categories, {}]); // Add a new item (can be empty) to the array
     };
@@ -23,7 +31,7 @@ function AddCategoryButton() {
             </IconButton>
             <div>
                 {categories.map((_:string, index:number) => (
-                    <ExpenseCategory key={index} />
+                    <ExpenseCategory key={index} category={catgory[0]} />
                 ))}
             </div>
         </>

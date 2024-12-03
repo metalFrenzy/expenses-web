@@ -2,14 +2,21 @@ import './expense-categor.scss';
 import shoppingCartIcon from "../../assets/shopping-cart.svg";
 
 
+type Props = {
+    category: {
+      id: string;
+      name: string;
+      amount: string;
+    };
+  };
 
-function ExpenseCategory() {
+function ExpenseCategory({ category }: Props) {
     return <div className='expense-category'>
-        <h3>Food & and Drink</h3>
+        <h3>{category.name}</h3>
          <div className='img-container'> 
             <img src={shoppingCartIcon} alt="Shopping Cart Icon" />
          </div> 
-        <h4>EGP1500</h4>
+        <h4>{category.amount}</h4>
     </div>
 }
 
