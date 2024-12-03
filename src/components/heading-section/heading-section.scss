@@ -1,0 +1,20 @@
+.heading-section {
+    display: flex;
+    align-items: center;
+}
+
+p {
+    font-weight: 700;
+    font-size: 16pt;
+    padding: 0 0.5rem;
+}
+
+.icon {
+    color: #323B4C;
+    transition: transform 0.2s, color 0.2s;
+
+}
+
+.icon:hover {
+    color: #6F81A4;   
+}
