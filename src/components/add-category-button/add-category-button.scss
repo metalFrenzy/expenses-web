@@ -1,0 +1,15 @@
+.add-category-button {
+  border: none;
+  border-radius: 5px;
+  background-color: #2008be;
+  padding: 8px 12px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s ease-in-out;
+  margin-bottom: 1rem;
+}
+
+.add-category-button:hover {
+  background-color: #3117d7;
+  transform: scale(1.05);
+}
