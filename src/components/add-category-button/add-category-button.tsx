@@ -23,7 +23,7 @@ function AddCategoryButton() {
         <>
             <button
                 className='add-category-button' onClick={handleAddCategory}> Add a Category </button>
-            <div>
+            <div className='cateogroy-container'>
                 {categories.map((_: string, index: number) => (
                     <ExpenseCategory key={index} category={catgory[0]} />
                 ))}
