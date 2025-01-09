@@ -12,7 +12,7 @@ const expensCatgories = [
         amount: "1500EGP",
     },
     {
-        id: "1",
+        id: "2",
         title: "Shopping",
         amount: "5000EGP",
     }
