@@ -6,13 +6,13 @@ import { useState } from 'react';
 type Props = {
     category: {
       id: string;
-      name: string;
+      title: string;
       amount: string;
     };
   };
 
 function ExpenseCategory({ category }: Props) {
-  const [title, setTitle] = useState(category.name);
+  const [title, setTitle] = useState(category.title);
   const clickHandler = () =>{
     setTitle('New Title');
   }
