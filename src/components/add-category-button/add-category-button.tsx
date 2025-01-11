@@ -14,8 +14,7 @@ function AddCategoryButton({ expensCatgories }: Props) {
 
     return (
         <>
-            <button
-                className='add-category-button'> Add a Category </button>
+            
             {expensCatgories.length === 0 &&
                 <div className='lost-state'>
                     <img src={lostInSpace} alt="lost-in-space" />
