@@ -3,7 +3,7 @@ import AddCategories from "../../components/add-categories/add-new-categories";
 import AddCategoryButton from "../../components/add-category-button";
 import HeadingSection from "../../components/heading-section";
 import { useState } from "react";
-import './home-page.scss'
+import './home-page.scss';
 
 const expensCatgories = [
     {
@@ -16,26 +16,49 @@ const expensCatgories = [
         title: "Shopping",
         amount: "5000EGP",
     }
-]
+];
 
 export default function HomePage() {
 
-    const [categories, setCategories] = useState(expensCatgories)
+    const [categories, setCategories] = useState(expensCatgories);
+    const [isDialogOpen, setIsDialogOpen] = useState(false);
 
-    const addCategory = (catgories: { title: string; amount: string, id: string }) => {
-        console.log('this is the cats from the home',catgories)
-        setCategories((prevState) => {
-            return [...prevState,catgories]
-        })
-    }
+    const addCategory = (category: { title: string; amount: string; id: string }) => {
+        console.log('This is the category from Home:', category);
+        setCategories((prevState) => [...prevState, category]);
+    };
 
-    return <>
-        <div heading-section>
-            <HeadingSection></HeadingSection>
-        </div>
+    const openDialog = () => {
+        setIsDialogOpen(true);
+    };
 
-        <AddCategoryButton expensCatgories={categories}></AddCategoryButton>
-        <AddCategories onAdd={addCategory}></AddCategories>
+    const closeDialog = () => {
+        setIsDialogOpen(false);
+    };
 
-    </>
+    return (
+        <>
+            <div heading-section>
+                <HeadingSection></HeadingSection>
+            </div>
+            <button
+                className="add-category-button"
+                onClick={openDialog}
+            >
+                Add a Category
+            </button>
+            <AddCategoryButton expensCatgories={categories}></AddCategoryButton>
+            {isDialogOpen && (
+                <div className="dialog-overlay">
+                    <div className="dialog">
+                       
+                        <AddCategories onAdd={(category) => {
+                            addCategory(category);
+                            closeDialog();
+                        }}></AddCategories>
+                    </div>
+                </div>
+            )}
+        </>
+    );
 }

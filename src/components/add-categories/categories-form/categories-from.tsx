@@ -5,7 +5,7 @@ interface Props {
     onSave: (categoryData: { title: string; amount: string }) => void;
 }
 
-function CategoriesForm({onSave}: Props) {
+function CategoriesForm({ onSave }: Props) {
     const [title, setTitle] = useState('')
     const [amount, setAmount] = useState('')
     const titleChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -18,7 +18,7 @@ function CategoriesForm({onSave}: Props) {
     const submitHandler = (event: React.FormEvent) => {
         event.preventDefault()
         const catgoryData = {
-            title:title,
+            title: title,
             amount: amount
         }
         onSave(catgoryData)
@@ -38,6 +38,9 @@ function CategoriesForm({onSave}: Props) {
         </div>
         <div className="action-button">
             <button className="add" type='submit'>Add Category</button>
+            <button className="close-button">
+                Close
+            </button>
         </div>
     </form>
 }
